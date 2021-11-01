@@ -22,9 +22,9 @@ from rest_framework import routers
 router=routers.DefaultRouter()
 router.register('artists_manage',ArtistsView,basename='artists_manage')
 router.register('genre_manage',GenreView,basename='genre_manage')
-router.register('movielist',MovieListView,basename='movielist')
 router.register('moviecrud',MovieCRUDView,basename='moviecrud')
 
+#router.register('movielist',MovieListView,basename='movielist')
 
 from rest_framework.authtoken import views   #For Get/Generate token on client side in postman
 

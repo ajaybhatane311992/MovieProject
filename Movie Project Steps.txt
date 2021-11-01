@@ -1,22 +1,16 @@
 urls
 
-1- Movie List Show 
-url:- http://127.0.0.1:8000/movielist/
-
-Allowed Method = Get
-Access:- readonly wihtout authenticate
-
 -----------------------------------------------------------------------
 
-2- Create user for authentication in admin pannel
+1- Create user for authentication in admin pannel
 
 url:- http://127.0.0.1:8000/admin/auth/user/
 
-and create also token if generate token from Postman then use step 3
+and create also token if generate token from Postman then use step 2
 
 -----------------------------------------------------------------------
 
-3- AuthToken Generate or Get
+2- AuthToken Generate or Get
 
 url:- http://127.0.0.1:8000/get-api-token/
 
@@ -33,11 +27,11 @@ NEW USER FOR INFO
 
 ------------------------------------------------------------------------
 
-4- Movie Add with authentication
+3- Movie CRUD operations with authentication and read only for normal users
 
 url:- http://127.0.0.1:8000/moviecrud/
 
-Allowed Method = Post, Get, Put
+Allowed Method = Post, Get, Put, Delete
 In Postman 
 In Headers-
 key-   Authorization
@@ -46,15 +40,15 @@ value- Token a893e87ce0ac49880dace1e2dbfbe5f88ea7bfec
 -for user- abc
 
 -----------------------------------------------------------------------
-5- manage List of Artists with authentication token
+4- manage List of Artists with authentication token and read only for normal users
 
 url:- http://127.0.0.1:8000/artists_manage/
 
-Allowed Method = Get, Post
+Allowed Method = Get, Post, Put, Delete
 
 -------------------------------------------------------------------------
-6- Manage List of Genre with authentication token
+5- Manage List of Genre with authentication token and read only for normal users
 
 url:- http://127.0.0.1:8000/genre_manage/
 
-Allowed Method = Get, Post
+Allowed Method = Get, Post, Put, Delete
