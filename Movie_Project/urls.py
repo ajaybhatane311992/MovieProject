@@ -33,3 +33,6 @@ urlpatterns = [
     path('',include(router.urls)),
     path('get-api-token/',views.obtain_auth_token,name='get-api-token')
 ]
+
+# username- xyz
+# password- Xyz@12345
