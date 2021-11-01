@@ -26,6 +26,11 @@ In Params-
 key:- username  value:- abc
 key:- password value:-abcabcabc
 
+NEW USER FOR INFO
+
+# username- xyz
+# password- Xyz@12345
+
 ------------------------------------------------------------------------
 
 4- Movie Add with authentication
