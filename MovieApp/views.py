@@ -10,11 +10,24 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly #IsAuthenticate
 
 # Create your views here.
 
+'''
 class ArtistsView(ModelViewSet):
     queryset = ArtistsModel.objects.all()
     serializer_class = ArtistsSerializer
     authentication_classes = [TokenAuthentication]  # AuthToken use
     permission_classes = [IsAuthenticatedOrReadOnly]
+'''
+
+class ArtistsView(ModelViewSet):
+#    queryset = ArtistsModel.objects.all()
+    serializer_class = ArtistsSerializer
+    authentication_classes = [TokenAuthentication]  # AuthToken use
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+    def get_queryset(self):
+        return ArtistsModel.objects.all()
+
+
 
 class GenreView(ModelViewSet):
     queryset = GenreModel.objects.all()

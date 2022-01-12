@@ -13,9 +13,12 @@ class GenreModel(models.Model):
 
 class MovieListModel(models.Model):
     movie_name=models.CharField(max_length=20)
-    artists=models.ForeignKey(ArtistsModel,on_delete=models.CASCADE)
-    genre=models.ForeignKey(GenreModel,on_delete=models.CASCADE)
+    artists=models.ForeignKey(ArtistsModel,on_delete=models.CASCADE,related_name='movieslist')
+    genre=models.ForeignKey(GenreModel,on_delete=models.CASCADE,related_name='genreby')
     details=models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.movie_name
 
 
 
