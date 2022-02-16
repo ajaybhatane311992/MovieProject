@@ -15,13 +15,14 @@ class ArtistsView(ModelViewSet):
     queryset = ArtistsModel.objects.all()
     serializer_class = ArtistsSerializer
     authentication_classes = [TokenAuthentication]  # AuthToken use
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly]    #permissions
+    
 '''
 
 class ArtistsView(ModelViewSet):
 #    queryset = ArtistsModel.objects.all()
     serializer_class = ArtistsSerializer
-    authentication_classes = [TokenAuthentication]  # AuthToken use
+    authentication_classes = [TokenAuthentication]  # AuthToken use for secure
     permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get_queryset(self):
