@@ -11,12 +11,13 @@ class GenreSerializer(ModelSerializer):
 
 class ArtistsSerializer(ModelSerializer):
     #movieslist=MovieListSerializer(many=True,read_only=True)
+
     class Meta:
         model=ArtistsModel
         fields='__all__'
 
 class MovieListSerializer(ModelSerializer):
-    artists = ArtistsSerializer(read_only=True)
+    artists = ArtistsSerializer(read_only=True , blank=True)
     genre= GenreSerializer(read_only=True)
     class Meta:
         model=MovieListModel
